@@ -26,7 +26,7 @@ export default function SkillVisual() {
     <div className="relative mx-auto aspect-square w-full max-w-md">
       {/* Glow */}
       <motion.div
-        className="absolute inset-6 rounded-full bg-gradient-to-br from-white/15 via-white/5 to-transparent blur-2xl"
+        className="absolute inset-6 rounded-full bg-linear-to-br from-white/15 via-white/5 to-transparent blur-2xl"
         animate={{ scale: [1, 1.06, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -51,7 +51,7 @@ export default function SkillVisual() {
 
       {/* Center core */}
       <motion.div
-        className="absolute inset-24 flex flex-col items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/15 to-white/0 backdrop-blur-md"
+        className="absolute inset-24 flex flex-col items-center justify-center rounded-full border border-white/15 bg-linear-to-br from-white/15 to-white/0 backdrop-blur-md"
         animate={{ y: [-6, 6, -6] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >

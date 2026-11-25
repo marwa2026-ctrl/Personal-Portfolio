@@ -239,7 +239,7 @@ function CosmicCodeVortex() {
 
       {/* Pink/Blue Glow behind the code globe */}
       <motion.div
-        className="absolute left-1/2 top-1/2 h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        className="absolute left-1/2 top-1/2 h-82.5 w-82.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{
           background:
             "radial-gradient(circle, rgba(238,144,150,0.2) 0%, rgba(20,124,191,0.15) 48%, transparent 72%)",
@@ -250,16 +250,16 @@ function CosmicCodeVortex() {
       />
 
       {/* Globe made entirely from flowing code */}
-      <div className="absolute left-1/2 top-1/2 h-[270px] w-[270px] -translate-x-1/2 -translate-y-1/2 sm:h-[320px] sm:w-[320px]">
+      <div className="absolute left-1/2 top-1/2 h-67.5 w-67.5 -translate-x-1/2 -translate-y-1/2 sm:h-80 sm:w-[320px]">
         {/* Outer orbit rings */}
         <motion.div
-          className="absolute -inset-[13px] rounded-full border border-[#EE9096]/40 shadow-[0_0_15px_rgba(238,144,150,0.3)]"
+          className="absolute -inset-3.25 rounded-full border border-neon-pink/40 shadow-[0_0_15px_rgba(238,144,150,0.3)]"
           style={{ transform: "rotateX(68deg) rotateZ(-18deg)" }}
           animate={{ rotateZ: [-18, 342] }}
           transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute -inset-[25px] rounded-full border border-[#147CBF]/30 shadow-[0_0_15px_rgba(20,124,191,0.2)]"
+          className="absolute -inset-6.25 rounded-full border border-neon-blue/30 shadow-[0_0_15px_rgba(20,124,191,0.2)]"
           style={{ transform: "rotateX(72deg) rotateZ(28deg)" }}
           animate={{ rotateZ: [28, -332] }}
           transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
@@ -293,7 +293,7 @@ function CosmicCodeVortex() {
                   ease: "easeInOut",
                 }}
               >
-                <span className="mr-3 text-[#EE9096]/60">
+                <span className="mr-3 text-neon-pink/60">
                   {`{ ${String(line.id + 1).padStart(2, "0")} }`}
                 </span>
                 
@@ -312,16 +312,16 @@ function CosmicCodeVortex() {
           </div>
 
           {/* Globe curvature and depth shading */}
-          <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-white/10 via-transparent to-black/80" />
+          <div className="pointer-events-none absolute inset-0 rounded-full bg-linear-to-br from-white/10 via-transparent to-black/80" />
           <div className="pointer-events-none absolute inset-[7%] rounded-full border border-white/10" />
-          <div className="pointer-events-none absolute inset-y-0 left-[25%] w-[50%] rounded-[50%] border-x border-[#EE9096]/20" />
-          <div className="pointer-events-none absolute inset-y-0 left-[39%] w-[22%] rounded-[50%] border-x border-[#147CBF]/20" />
+          <div className="pointer-events-none absolute inset-y-0 left-[25%] w-[50%] rounded-[50%] border-x border-neon-pink/20" />
+          <div className="pointer-events-none absolute inset-y-0 left-[39%] w-[22%] rounded-[50%] border-x border-neon-blue/20" />
         </div>
       </div>
 
       {/* Small orbiting light */}
       <motion.span
-        className="absolute left-1/2 top-1/2 h-2 w-2 rounded-full bg-[#EE9096] shadow-[0_0_20px_6px_rgba(238,144,150,0.8)]"
+        className="absolute left-1/2 top-1/2 h-2 w-2 rounded-full bg-neon-pink shadow-[0_0_20px_6px_rgba(238,144,150,0.8)]"
         animate={{ rotate: 360 }}
         style={{ transformOrigin: "0 -155px" }}
         transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
@@ -332,7 +332,7 @@ function CosmicCodeVortex() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.8 }}
-        className="absolute bottom-5 left-5 z-10 text-[9px] uppercase tracking-wider text-[#EE9096] sm:left-8 sm:text-[10px]"
+        className="absolute bottom-5 left-5 z-10 text-[9px] uppercase tracking-wider text-neon-pink sm:left-8 sm:text-[10px]"
       >
         Building ideas into reality
       </motion.p>
@@ -407,10 +407,10 @@ function FloatingHeroButtons() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="group flex cursor-default items-center w-full h-10 gap-1 rounded-full border border-line bg-surface-2/80 px-2 text-xs font-medium text-cream shadow-[0_0_15px_rgba(238,144,150,0.15)] backdrop-blur-xl transition-colors duration-300 hover:border-[#EE9096] hover:bg-surface-2 sm:gap-3 sm:px-4 sm:py-3 sm:text-sm"
+              className="group flex cursor-default items-center w-full h-10 gap-1 rounded-full border border-line bg-surface-2/80 px-2 text-xs font-medium text-cream shadow-[0_0_15px_rgba(238,144,150,0.15)] backdrop-blur-xl transition-colors duration-300 hover:border-neon-pink hover:bg-surface-2 sm:gap-3 sm:px-4 sm:py-3 sm:text-sm"
             >
               <motion.span
-                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line bg-surface-3 text-[#147CBF]"
+                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line bg-surface-3 text-neon-blue"
                 whileHover={{ rotate: 360, scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
@@ -420,7 +420,7 @@ function FloatingHeroButtons() {
               <span className="whitespace-nowrap">{badge.label}</span>
 
               <motion.span
-                className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#EE9096]"
+                className="h-1.5 w-1.5 shrink-0 rounded-full bg-neon-pink"
                 animate={{ opacity: [1, 0.3, 1], scale: [1, 0.8, 1] }}
                 transition={{
                   duration: 2,
@@ -463,16 +463,16 @@ function FeatureCard({ item, index }) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.55, delay: index * 0.1, type: "spring" }}
       whileHover={hoverVariants[index % hoverVariants.length]}
-      className="group relative overflow-hidden rounded-2xl border border-line bg-surface-2 p-6 transition-colors hover:border-[#EE9096] shadow-[0_0_30px_rgba(0,0,0,0.05)]"
+      className="group relative overflow-hidden rounded-2xl border border-line bg-surface-2 p-6 transition-colors hover:border-neon-pink shadow-[0_0_30px_rgba(0,0,0,0.05)]"
     >
       <motion.div
-        className="pointer-events-none absolute -inset-24 bg-gradient-to-br from-[#EE9096]/5 to-[#147CBF]/5 opacity-50 transition-opacity group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-24 bg-linear-to-br from-neon-pink/5 to-neon-blue/5 opacity-50 transition-opacity group-hover:opacity-100"
         animate={{ rotate: 360 }}
         transition={{ duration: 24 + index * 4, repeat: Infinity, ease: "linear" }}
       />
 
       <motion.div
-        className="relative mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#EE9096] to-[#147CBF] text-white shadow-lg"
+        className="relative mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-neon-pink to-neon-blue text-white shadow-lg"
         whileHover={{ rotate: [0, -12, 12, -8, 0], scale: 1.1 }}
         transition={{ duration: 0.6 }}
       >
@@ -511,7 +511,7 @@ function ProjectSlider({ items }) {
 
   return (
     <div className="w-full">
-      <div className="flex h-[350px] w-full gap-2 sm:h-[450px] sm:gap-3 lg:h-[500px]">
+      <div className="flex h-87.5 w-full gap-2 sm:h-112.5 sm:gap-3 lg:h-125">
         {items.map((item, index) => {
           const p = obj(item);
           const title = str(p.title);
@@ -530,7 +530,7 @@ function ProjectSlider({ items }) {
               onClick={() => setActiveIndex(index)}
               animate={{ flexGrow: isActive ? 6 : 1 }}
               transition={{ duration: 0.65, ease: [0.2, 0.75, 0.25, 1] }}
-              className="group relative min-w-0 flex-1 overflow-hidden rounded-2xl border border-line bg-surface-2 text-left shadow-lg outline-none focus-visible:ring-2 focus-visible:ring-[#147CBF]"
+              className="group relative min-w-0 flex-1 overflow-hidden rounded-2xl border border-line bg-surface-2 text-left shadow-lg outline-none focus-visible:ring-2 focus-visible:ring-neon-blue"
               aria-label={title}
               aria-pressed={isActive}
             >
@@ -559,7 +559,7 @@ function ProjectSlider({ items }) {
               <div
                 className={`absolute inset-0 transition-colors duration-500 ${
                   isActive
-                    ? "bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+                    ? "bg-linear-to-t from-black/90 via-black/40 to-transparent"
                     : "bg-black/60"
                 }`}
               />
@@ -574,7 +574,7 @@ function ProjectSlider({ items }) {
                 className={`absolute left-1/2 font-display font-semibold text-white transition-all duration-500 ${
                   isActive
                     ? "bottom-5 w-[calc(100%-28px)] -translate-x-1/2 rotate-0 whitespace-normal text-center text-base leading-tight drop-shadow-lg sm:bottom-7 sm:w-[calc(100%-44px)] sm:text-2xl"
-                    : "bottom-5 w-max -translate-x-1/2 rotate-[-90deg] whitespace-nowrap text-xs tracking-wide sm:text-sm"
+                    : "bottom-5 w-max -translate-x-1/2 -rotate-90 whitespace-nowrap text-xs tracking-wide sm:text-sm"
                 }`}
               >
                 {title}
@@ -584,9 +584,9 @@ function ProjectSlider({ items }) {
                 initial={false}
                 animate={{ opacity: isActive ? 1 : 0, y: isActive ? 0 : 10 }}
                 transition={{ duration: 0.3, delay: isActive ? 0.12 : 0 }}
-                className="pointer-events-none absolute bottom-[62px] left-4 right-4 text-center sm:bottom-[78px] sm:left-7 sm:right-7"
+                className="pointer-events-none absolute bottom-15.5 left-4 right-4 text-center sm:bottom-19.5 sm:left-7 sm:right-7"
               >
-                <p className="mb-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-[#EE9096] sm:text-[10px]">
+                <p className="mb-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-neon-pink sm:text-[10px]">
                   {tech}
                 </p>
                 <p className="line-clamp-3 text-[10px] leading-relaxed text-white/85 sm:text-xs">
@@ -613,7 +613,7 @@ function ProjectSlider({ items }) {
               aria-pressed={activeIndex === index}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 activeIndex === index
-                  ? "w-5 bg-[#147CBF] shadow-[0_0_10px_rgba(20,124,191,0.6)]"
+                  ? "w-5 bg-neon-blue shadow-[0_0_10px_rgba(20,124,191,0.6)]"
                   : "w-1.5 bg-line hover:bg-muted"
               }`}
             />
@@ -667,7 +667,7 @@ function ProjectDetail({ item, onClose, onPrev, onNext, index, total }) {
         exit={{ opacity: 0, scale: 0.92, y: 30 }}
         transition={{ type: "spring", damping: 24, stiffness: 280 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-[#147CBF]/30 bg-surface shadow-[0_0_50px_rgba(20,124,191,0.15)]"
+        className="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-neon-blue/30 bg-surface shadow-[0_0_50px_rgba(20,124,191,0.15)]"
       >
         <button
           type="button"
@@ -693,11 +693,11 @@ function ProjectDetail({ item, onClose, onPrev, onNext, index, total }) {
             </div>
           )}
 
-          <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent" />
         </div>
 
         <div className="relative -mt-12 p-6 sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#147CBF]">
+          <p className="text-xs font-semibold uppercase tracking-widest text-neon-blue">
             {number}
             {number && tech ? " — " : ""}
             {tech}
@@ -716,7 +716,7 @@ function ProjectDetail({ item, onClose, onPrev, onNext, index, total }) {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#EE9096] to-[#147CBF] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 shadow-[0_0_20px_rgba(238,144,150,0.4)]"
+              className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-neon-pink to-neon-blue px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 shadow-[0_0_20px_rgba(238,144,150,0.4)]"
             >
               View Project <FiArrowRight />
             </a>
@@ -729,7 +729,7 @@ function ProjectDetail({ item, onClose, onPrev, onNext, index, total }) {
               <button
                 type="button"
                 onClick={onPrev}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-cream transition hover:border-[#147CBF] hover:bg-surface-2"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-cream transition hover:border-neon-blue hover:bg-surface-2"
                 aria-label="Previous project"
               >
                 <FiChevronLeft />
@@ -738,7 +738,7 @@ function ProjectDetail({ item, onClose, onPrev, onNext, index, total }) {
               <button
                 type="button"
                 onClick={onNext}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-cream transition hover:border-[#147CBF] hover:bg-surface-2"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-cream transition hover:border-neon-blue hover:bg-surface-2"
                 aria-label="Next project"
               >
                 <FiChevronRight />
@@ -810,7 +810,7 @@ function ProjectsSection({ projects }) {
           transition={{ duration: 0.5 }}
           className="mb-10 max-w-2xl"
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#EE9096]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-neon-pink">
             {eyebrow}
           </p>
 
@@ -828,7 +828,7 @@ function ProjectsSection({ projects }) {
         <div className="mt-10 text-center">
           <Link
             to="/projects"
-            className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-cream transition hover:border-[#EE9096] hover:text-[#EE9096] hover:bg-surface-2 hover:shadow-[0_0_20px_rgba(238,144,150,0.2)]"
+            className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-cream transition hover:border-neon-pink hover:text-neon-pink hover:bg-surface-2 hover:shadow-[0_0_20px_rgba(238,144,150,0.2)]"
           >
             See all projects <FiArrowRight />
           </Link>
@@ -868,10 +868,10 @@ export default function Home() {
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#147CBF]"
+              className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-neon-blue"
             >
               <motion.span
-                className="inline-block h-1.5 w-1.5 rounded-full bg-[#EE9096] shadow-[0_0_10px_rgba(238,144,150,0.8)]"
+                className="inline-block h-1.5 w-1.5 rounded-full bg-neon-pink shadow-[0_0_10px_rgba(238,144,150,0.8)]"
                 animate={{ opacity: [1, 0.3, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
@@ -884,7 +884,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="max-w-xl font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
             >
-              <span className="bg-gradient-to-r from-[#EE9096] to-[#147CBF] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(238,144,150,0.3)]">
+              <span className="bg-linear-to-r from-neon-pink to-neon-blue bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(238,144,150,0.3)]">
                 {heroHeadline}
               </span>
             </motion.h1>
@@ -906,14 +906,14 @@ export default function Home() {
             >
               {heroLocation ? (
                 <span className="flex items-center gap-1.5">
-                  <FiMapPin className="text-[#EE9096]" />
+                  <FiMapPin className="text-neon-pink" />
                   {heroLocation}
                 </span>
               ) : null}
 
               {siteEmail ? (
                 <span className="flex items-center gap-1.5">
-                  <FiMail className="text-[#147CBF]" />
+                  <FiMail className="text-neon-blue" />
                   {siteEmail}
                 </span>
               ) : null}
@@ -945,11 +945,11 @@ export default function Home() {
               >
                 <Link
                   to={str(heroPrimary.path) || "/projects"}
-                  className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#EE9096] to-[#147CBF] px-6 py-3.5 text-sm font-medium text-white shadow-[0_0_20px_rgba(238,144,150,0.4)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(20,124,191,0.6)]"
+                  className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-linear-to-r from-neon-pink to-neon-blue px-6 py-3.5 text-sm font-medium text-white shadow-[0_0_20px_rgba(238,144,150,0.4)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(20,124,191,0.6)]"
                 >
                   <motion.span
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-y-0 left-[-60%] w-1/3 skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                    className="pointer-events-none absolute inset-y-0 left-[-60%] w-1/3 skew-x-[-20deg] bg-linear-to-r from-transparent via-white/40 to-transparent"
                     animate={{ left: ["-60%", "140%"] }}
                     transition={{
                       duration: 1.1, delay: 1.4,
@@ -984,10 +984,10 @@ export default function Home() {
               >
                 <a
                   href="#about"
-                  className="group inline-flex items-center gap-3 rounded-full border border-[#147CBF]/40 bg-surface-2 px-6 py-3.5 text-sm font-medium text-cream backdrop-blur-sm transition-all duration-300 hover:border-[#147CBF] hover:bg-[#147CBF]/10 hover:shadow-[0_0_20px_rgba(20,124,191,0.3)]"
+                  className="group inline-flex items-center gap-3 rounded-full border border-neon-blue/40 bg-surface-2 px-6 py-3.5 text-sm font-medium text-cream backdrop-blur-sm transition-all duration-300 hover:border-neon-blue hover:bg-neon-blue/10 hover:shadow-[0_0_20px_rgba(20,124,191,0.3)]"
                 >
                   <motion.span
-                    className="flex items-center text-[#147CBF]"
+                    className="flex items-center text-neon-blue"
                     whileHover={{ y: 3 }}
                     transition={{ duration: 0.25 }}
                   >
@@ -995,7 +995,7 @@ export default function Home() {
                   </motion.span>
                   <span>More About Me</span> {/* 👈 Changed text */}
                   <motion.span
-                    className="flex items-center text-muted transition-colors group-hover:text-[#147CBF]"
+                    className="flex items-center text-muted transition-colors group-hover:text-neon-blue"
                     whileHover={{ x: 3, y: -3 }}
                     transition={{ duration: 0.25 }}
                   >
@@ -1011,7 +1011,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mx-auto h-[400px] w-full max-w-md overflow-visible sm:h-[500px]"
+            className="relative mx-auto h-100 w-full max-w-md overflow-visible sm:h-125"
           >
             <div className="absolute inset-0 overflow-hidden rounded-3xl shadow-[0_0_80px_rgba(20,124,191,0.15)] ring-1 ring-line">
               <CosmicCodeVortex />
@@ -1030,7 +1030,7 @@ export default function Home() {
           <motion.span
             animate={{ y: [0, 4, 0] }}
             transition={{ duration: 1.6, repeat: Infinity }}
-            className="text-[#147CBF]"
+            className="text-neon-blue"
           >
             <FiArrowDown />
           </motion.span>
@@ -1056,22 +1056,22 @@ export default function Home() {
                   src={aboutPhoto}
                   alt={aboutPhotoAlt}
                   loading="lazy"
-                  className="h-[360px] w-full object-cover"
+                  className="h-90 w-full object-cover"
                 />
               ) : (
-                <div className="flex h-[360px] w-full items-center justify-center bg-surface-2 text-muted">
+                <div className="flex h-90 w-full items-center justify-center bg-surface-2 text-muted">
                   No photo
                 </div>
               )}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
             <motion.div
-              className="absolute -bottom-4 -right-4 rounded-2xl border border-[#EE9096]/30 bg-surface-2 px-4 py-2 shadow-[0_0_20px_rgba(238,144,150,0.2)]"
+              className="absolute -bottom-4 -right-4 rounded-2xl border border-neon-pink/30 bg-surface-2 px-4 py-2 shadow-[0_0_20px_rgba(238,144,150,0.2)]"
               animate={{ y: [-3, 3, -3] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              <p className="text-[10px] font-semibold uppercase tracking-widest text-[#EE9096]">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-neon-pink">
                 Based in
               </p>
               <p className="text-xs font-medium text-cream">
@@ -1087,7 +1087,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#147CBF]">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-neon-blue">
               {aboutEyebrow}
             </p>
 
@@ -1101,7 +1101,7 @@ export default function Home() {
 
             <Link
               to="/about"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-medium text-cream transition hover:border-[#147CBF] hover:text-[#147CBF] hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.2)]"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-medium text-cream transition hover:border-neon-blue hover:text-neon-blue hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.2)]"
             >
               Read full story <FiArrowRight />
             </Link>
@@ -1118,7 +1118,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="mx-auto mb-12 max-w-2xl text-center"
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#EE9096]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-neon-pink">
             WHY ME
           </p>
 

@@ -37,7 +37,7 @@ function SendMessageButton({ isAnimating, isSent }) {
       }
       transition={{ duration: 0.42, ease }}
       aria-label="Send message"
-      className="relative flex h-[68px] w-[78px] shrink-0 items-center justify-center overflow-visible rounded-[24px] border border-[#EE9096]/50 bg-gradient-to-br from-[#EE9096] to-[#147CBF] text-white! shadow-[0_0_20px_rgba(238,144,150,0.3)] backdrop-blur-xl transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_30px_rgba(20,124,191,0.5)] disabled:cursor-not-allowed"
+      className="relative flex h-17 w-19.5 shrink-0 items-center justify-center overflow-visible rounded-3xl border border-neon-pink/50 bg-linear-to-br from-neon-pink to-neon-blue text-white! shadow-[0_0_20px_rgba(238,144,150,0.3)] backdrop-blur-xl transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_30px_rgba(20,124,191,0.5)] disabled:cursor-not-allowed"
     >
       <svg
         viewBox="0 0 78 68"
@@ -112,7 +112,7 @@ function ContactField({ label, name, value, onChange, placeholder, type = "text"
       variants={fieldVariants}
       className="group block"
     >
-      <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#EE9096]! transition-colors group-focus-within:text-[#147CBF]!">
+      <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-neon-pink! transition-colors group-focus-within:text-neon-blue!">
         {label}
       </span>
 
@@ -123,7 +123,7 @@ function ContactField({ label, name, value, onChange, placeholder, type = "text"
         onChange={onChange}
         placeholder={placeholder}
         required
-        className="w-full rounded-2xl border border-line bg-surface-2/80 px-4 py-4 text-sm text-cream outline-none backdrop-blur-md transition-all duration-300 placeholder:text-muted hover:border-[#EE9096]/50 focus:border-[#147CBF] focus:bg-surface-3/90 focus:shadow-[0_0_0_3px_rgba(20,124,191,0.15)]"
+        className="w-full rounded-2xl border border-line bg-surface-2/80 px-4 py-4 text-sm text-cream outline-none backdrop-blur-md transition-all duration-300 placeholder:text-muted hover:border-neon-pink/50 focus:border-neon-blue focus:bg-surface-3/90 focus:shadow-[0_0_0_3px_rgba(20,124,191,0.15)]"
       />
     </motion.label>
   );
@@ -204,12 +204,12 @@ export default function Contact() {
 
         {/* Lighter overlays so the image is clearly visible */}
         <div className="absolute inset-0 -z-10 bg-bg/40" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-bg/60 via-bg/20 to-surface/60" />
+        <div className="absolute inset-0 -z-10 bg-linear-to-br from-bg/60 via-bg/20 to-surface/60" />
 
         {/* Subtle background light (Pink & Blue) */}
         <motion.div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-32 top-20 -z-10 h-96 w-96 rounded-full bg-gradient-to-br from-[#EE9096]/20 to-[#147CBF]/20 blur-[120px]"
+          className="pointer-events-none absolute -right-32 top-20 -z-10 h-96 w-96 rounded-full bg-linear-to-br from-neon-pink/20 to-neon-blue/20 blur-[120px]"
           animate={{
             x: [0, -25, 0],
             y: [0, 30, 0],
@@ -230,14 +230,14 @@ export default function Contact() {
             transition={{ duration: 0.7, ease }}
             className="mb-14 max-w-3xl sm:mb-20"
           >
-            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-[#EE9096]!">
-              <span className="h-px w-8 bg-[#EE9096]" />
+            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-neon-pink!">
+              <span className="h-px w-8 bg-neon-pink" />
               05 — GET IN TOUCH
             </p>
 
             <h1 className="text-5xl font-light leading-[1.08] tracking-tight text-cream sm:text-6xl lg:text-7xl">
               Let&apos;s start a
-              <span className="mt-2 block font-serif italic text-[#147CBF]!">
+              <span className="mt-2 block font-serif italic text-neon-blue!">
                 conversation.
               </span>
             </h1>
@@ -269,7 +269,7 @@ export default function Contact() {
                 href="mailto:marwaislam313@gmail.com"
                 className="group flex items-center gap-4"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-[#EE9096]! transition-all duration-300 group-hover:border-[#EE9096] group-hover:bg-[#EE9096]/10 group-hover:shadow-[0_0_15px_rgba(238,144,150,0.3)]">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-neon-pink! transition-all duration-300 group-hover:border-neon-pink group-hover:bg-neon-pink/10 group-hover:shadow-[0_0_15px_rgba(238,144,150,0.3)]">
                   <FiMail size={20} />
                 </span>
                 <span>
@@ -278,11 +278,11 @@ export default function Contact() {
                     marwaislam313@gmail.com
                   </span>
                 </span>
-                <FiArrowUpRight className="ml-auto text-muted transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#EE9096]!" />
+                <FiArrowUpRight className="ml-auto text-muted transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-neon-pink!" />
               </a>
 
               <div className="flex items-center gap-4">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-[#147CBF]!">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-neon-blue!">
                   <FiMapPin size={20} />
                 </span>
                 <span>
@@ -304,7 +304,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label="GitHub"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-[#147CBF]! transition-all duration-300 hover:-translate-y-1 hover:border-[#147CBF] hover:bg-[#147CBF]/10 hover:shadow-[0_0_15px_rgba(20,124,191,0.3)]"
+                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-neon-blue! transition-all duration-300 hover:-translate-y-1 hover:border-neon-blue hover:bg-neon-blue/10 hover:shadow-[0_0_15px_rgba(20,124,191,0.3)]"
                   >
                     <FiGithub size={20} />
                   </a>
@@ -313,7 +313,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label="LinkedIn"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-[#EE9096]! transition-all duration-300 hover:-translate-y-1 hover:border-[#EE9096] hover:bg-[#EE9096]/10 hover:shadow-[0_0_15px_rgba(238,144,150,0.3)]"
+                    className="flex h-12 w-12 items-center justify-center rounded-2xl border border-line bg-surface-2/80 backdrop-blur-sm text-neon-pink! transition-all duration-300 hover:-translate-y-1 hover:border-neon-pink hover:bg-neon-pink/10 hover:shadow-[0_0_15px_rgba(238,144,150,0.3)]"
                   >
                     <FiLinkedin size={20} />
                   </a>
@@ -335,14 +335,14 @@ export default function Contact() {
               />
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute -inset-2 -z-10 rounded-[2.5rem] bg-[#EE9096]/10 blur-2xl"
+                className="pointer-events-none absolute -inset-2 -z-10 rounded-[2.5rem] bg-neon-pink/10 blur-2xl"
               />
 
               {/* Animated outer border */}
-              <div className="relative overflow-hidden rounded-[2rem] p-px shadow-[0_30px_100px_rgba(0,0,0,0.15)]">
+              <div className="relative overflow-hidden rounded-4xl p-px shadow-[0_30px_100px_rgba(0,0,0,0.15)]">
                 <motion.div
                   aria-hidden="true"
-                  className="absolute -inset-[100%] opacity-60"
+                  className="absolute -inset-full opacity-60"
                   style={{
                     background:
                       "conic-gradient(from 0deg, transparent 0deg, rgba(238,144,150,0.6) 70deg, transparent 130deg, transparent 230deg, rgba(20,124,191,0.6) 290deg, transparent 360deg)",
@@ -364,18 +364,18 @@ export default function Contact() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -12 }}
                         transition={{ duration: 0.45, ease }}
-                        className="flex min-h-[460px] flex-col items-center justify-center text-center"
+                        className="flex min-h-115 flex-col items-center justify-center text-center"
                       >
                         <motion.div
                           initial={{ scale: 0.5, rotate: -15 }}
                           animate={{ scale: 1, rotate: 0 }}
                           transition={{ duration: 0.45, ease }}
-                          className="mb-6 flex h-20 w-20 items-center justify-center rounded-[28px] border border-[#77AB00]/30 bg-[#77AB00]/10 text-[#77AB00]! shadow-[0_0_30px_rgba(119,171,0,0.2)]"
+                          className="mb-6 flex h-20 w-20 items-center justify-center rounded-[28px] border border-neon-green/30 bg-neon-green/10 text-neon-green! shadow-[0_0_30px_rgba(119,171,0,0.2)]"
                         >
                           <FiCheckCircle size={34} />
                         </motion.div>
 
-                        <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-[#EE9096]!">
+                        <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-neon-pink!">
                           Demo complete
                         </p>
                         <h2 className="text-3xl font-light text-cream sm:text-4xl">
@@ -389,7 +389,7 @@ export default function Contact() {
                         <button
                           type="button"
                           onClick={resetForm}
-                          className="mt-8 inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-medium text-cream transition-all duration-300 hover:border-[#147CBF] hover:text-[#147CBF]! hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.2)]"
+                          className="mt-8 inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-medium text-cream transition-all duration-300 hover:border-neon-blue hover:text-neon-blue! hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.2)]"
                         >
                           <FiArrowLeft size={16} />
                           Write another message
@@ -456,7 +456,7 @@ export default function Contact() {
                           variants={fieldVariants}
                           className="group block"
                         >
-                          <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-[#EE9096]! transition-colors group-focus-within:text-[#147CBF]!">
+                          <span className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-neon-pink! transition-colors group-focus-within:text-neon-blue!">
                             Your message
                           </span>
                           <textarea
@@ -466,7 +466,7 @@ export default function Contact() {
                             placeholder="Tell me a little about your project..."
                             rows={5}
                             required
-                            className="w-full resize-y rounded-2xl border border-line bg-surface-2/80 px-4 py-4 text-sm leading-7 text-cream outline-none backdrop-blur-md transition-all duration-300 placeholder:text-muted hover:border-[#EE9096]/50 focus:border-[#147CBF] focus:bg-surface-3/90 focus:shadow-[0_0_0_3px_rgba(20,124,191,0.15)]"
+                            className="w-full resize-y rounded-2xl border border-line bg-surface-2/80 px-4 py-4 text-sm leading-7 text-cream outline-none backdrop-blur-md transition-all duration-300 placeholder:text-muted hover:border-neon-pink/50 focus:border-neon-blue focus:bg-surface-3/90 focus:shadow-[0_0_0_3px_rgba(20,124,191,0.15)]"
                           />
                         </motion.label>
 
@@ -475,13 +475,13 @@ export default function Contact() {
                           transition={{ duration: 0.5, ease }}
                           className="flex flex-wrap items-center justify-between gap-5 border-t border-line pt-6"
                         >
-                          <p className="max-w-[220px] text-xs leading-6 text-ink-soft">
+                          <p className="max-w-55 text-xs leading-6 text-ink-soft">
                             This is a front-end demo. No message will be
                             emailed or stored.
                           </p>
 
                           <div className="flex items-center gap-4">
-                            <span className="hidden text-sm font-medium text-[#147CBF]! sm:inline">
+                            <span className="hidden text-sm font-medium text-neon-blue! sm:inline">
                               Send message
                             </span>
                             <SendMessageButton

@@ -81,7 +81,7 @@ export default function Education() {
         />
 
         {/* Changed the timeline line to a subtle Blue glow */}
-        <div className="relative border-l border-[#147CBF]/30 pl-8">
+        <div className="relative border-l border-neon-blue/30 pl-8">
           {displayItems.map((item, i) => (
             <motion.div
               key={item.number || `edu-${i}`}
@@ -92,14 +92,14 @@ export default function Education() {
               className="relative mb-10 last:mb-0"
             >
               {/* 🌟 The glowing Pink timeline dot */}
-              <span className="absolute -left-[41px] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#EE9096] bg-bg shadow-[0_0_12px_rgba(238,144,150,0.8)]" />
+              <span className="absolute -left-10.25 flex h-4 w-4 items-center justify-center rounded-full border-2 border-neon-pink bg-bg shadow-[0_0_12px_rgba(238,144,150,0.8)]" />
               
               <div className="flex flex-wrap items-center gap-3 text-xs">
-                <span className="font-bold uppercase tracking-widest text-[#EE9096]!">
+                <span className="font-bold uppercase tracking-widest text-neon-pink!">
                   {item.date}
                 </span>
                 <span className="text-muted">·</span>
-                <span className="uppercase tracking-widest text-[#147CBF]! font-semibold">
+                <span className="uppercase tracking-widest text-neon-blue! font-semibold">
                   {item.type}
                 </span>
               </div>
@@ -117,7 +117,7 @@ export default function Education() {
                   {item.tags.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full border border-line bg-surface-2 px-2.5 py-0.5 text-xs text-cream transition-colors hover:border-[#EE9096] hover:text-[#EE9096]"
+                      className="rounded-full border border-line bg-surface-2 px-2.5 py-0.5 text-xs text-cream transition-colors hover:border-neon-pink hover:text-neon-pink"
                     >
                       {t}
                     </span>
@@ -128,8 +128,8 @@ export default function Education() {
               {/* Status Badge - Glows Blue if In Progress, Pink if Completed */}
               <span className={`mt-3 inline-block rounded-full px-2.5 py-0.5 text-xs font-bold border ${
                 item.status.toLowerCase().includes("progress")
-                  ? "bg-[#147CBF]/10 text-[#147CBF]! border-[#147CBF]/30"
-                  : "bg-[#EE9096]/10 text-[#EE9096]! border-[#EE9096]/30"
+                  ? "bg-neon-blue/10 text-neon-blue! border-neon-blue/30"
+                  : "bg-neon-pink/10 text-neon-pink! border-neon-pink/30"
               }`}>
                 {item.status}
               </span>

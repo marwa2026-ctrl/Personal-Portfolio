@@ -63,10 +63,10 @@ export default function Admin() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
           animate={{ opacity: 1, y: 0 }}
-          className="w-full max-w-md rounded-[2rem] border border-line bg-surface p-8 shadow-[0_0_50px_rgba(238,144,150,0.05)]"
+          className="w-full max-w-md rounded-4xl border border-line bg-surface p-8 shadow-[0_0_50px_rgba(238,144,150,0.05)]"
         >
           <div className="mb-8 flex flex-col items-center text-center">
-            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-[#EE9096]/10 text-[#EE9096] shadow-[0_0_20px_rgba(238,144,150,0.2)]">
+            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-neon-pink/10 text-neon-pink shadow-[0_0_20px_rgba(238,144,150,0.2)]">
               <FiLock size={32} />
             </span>
             <h1 className="mt-5 text-2xl font-bold text-cream">Admin Access</h1>
@@ -78,11 +78,11 @@ export default function Admin() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password..."
-              className="w-full rounded-2xl border border-line bg-surface-2 px-5 py-4 text-cream outline-none transition-all placeholder:text-muted focus:border-[#147CBF] focus:shadow-[0_0_0_3px_rgba(20,124,191,0.15)]"
+              className="w-full rounded-2xl border border-line bg-surface-2 px-5 py-4 text-cream outline-none transition-all placeholder:text-muted focus:border-neon-blue focus:shadow-[0_0_0_3px_rgba(20,124,191,0.15)]"
             />
             <button 
               type="submit" 
-              className="w-full rounded-2xl bg-gradient-to-r from-[#EE9096] to-[#147CBF] py-4 font-bold text-white transition-all hover:opacity-90 hover:shadow-[0_0_20px_rgba(20,124,191,0.4)]"
+              className="w-full rounded-2xl bg-linear-to-r from-neon-pink to-neon-blue py-4 font-bold text-white transition-all hover:opacity-90 hover:shadow-[0_0_20px_rgba(20,124,191,0.4)]"
             >
               Unlock Dashboard
             </button>
@@ -99,12 +99,12 @@ export default function Admin() {
         
         {/* Sidebar */}
         <div className="w-full shrink-0 md:w-72">
-          <div className="rounded-[2rem] border border-line bg-surface p-5 shadow-lg">
+          <div className="rounded-4xl border border-line bg-surface p-5 shadow-lg">
             <div className="mb-6 flex items-center justify-between border-b border-line pb-4">
-              <h2 className="text-xs font-bold uppercase tracking-widest text-[#EE9096]">
+              <h2 className="text-xs font-bold uppercase tracking-widest text-neon-pink">
                 Admin Panel
               </h2>
-              <button onClick={handleLogout} className="text-muted hover:text-[#B60300] transition-colors" title="Logout">
+              <button onClick={handleLogout} className="text-muted hover:text-neon-red transition-colors" title="Logout">
                 <FiLogOut size={18} />
               </button>
             </div>
@@ -114,12 +114,12 @@ export default function Admin() {
                 onClick={() => setActiveTab("messages")} 
                 className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-bold transition-all ${
                   activeTab === "messages" 
-                    ? "bg-[#147CBF]/10 text-[#147CBF]" 
+                    ? "bg-neon-blue/10 text-neon-blue" 
                     : "text-cream hover:bg-surface-2"
                 }`}
               >
                 <FiMail size={18} /> Contact Messages
-                <span className="ml-auto rounded-full bg-[#147CBF]/20 px-2.5 py-0.5 text-xs text-[#147CBF]">
+                <span className="ml-auto rounded-full bg-neon-blue/20 px-2.5 py-0.5 text-xs text-neon-blue">
                   {contactMessages.length}
                 </span>
               </button>
@@ -128,12 +128,12 @@ export default function Admin() {
                 onClick={() => setActiveTab("feedback")} 
                 className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-bold transition-all ${
                   activeTab === "feedback" 
-                    ? "bg-[#EE9096]/10 text-[#EE9096]" 
+                    ? "bg-neon-pink/10 text-neon-pink" 
                     : "text-cream hover:bg-surface-2"
                 }`}
               >
                 <FiMessageSquare size={18} /> Feedback
-                <span className="ml-auto rounded-full bg-[#EE9096]/20 px-2.5 py-0.5 text-xs text-[#EE9096]">
+                <span className="ml-auto rounded-full bg-neon-pink/20 px-2.5 py-0.5 text-xs text-neon-pink">
                   {feedbacks.length}
                 </span>
               </button>
@@ -142,7 +142,7 @@ export default function Admin() {
                 onClick={() => setActiveTab("settings")} 
                 className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-sm font-bold transition-all ${
                   activeTab === "settings" 
-                    ? "bg-[#FDC700]/10 text-[#FDC700]" 
+                    ? "bg-neon-yellow/10 text-neon-yellow" 
                     : "text-cream hover:bg-surface-2"
                 }`}
               >
@@ -153,7 +153,7 @@ export default function Admin() {
         </div>
 
         {/* Main Content Area */}
-        <div className="flex-1 rounded-[2rem] border border-line bg-surface p-6 shadow-lg sm:p-8">
+        <div className="flex-1 rounded-4xl border border-line bg-surface p-6 shadow-lg sm:p-8">
           <AnimatePresence mode="wait">
             
             {/* 📩 Contact Messages Tab */}
@@ -171,7 +171,7 @@ export default function Admin() {
                     {contactMessages.map((msg, i) => (
                       <div key={i} className="rounded-2xl border border-line bg-surface-2 p-5">
                         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-3 mb-3">
-                          <p className="font-bold text-[#147CBF]">{msg.name} <span className="text-sm font-normal text-muted">({msg.email})</span></p>
+                          <p className="font-bold text-neon-blue">{msg.name} <span className="text-sm font-normal text-muted">({msg.email})</span></p>
                           <p className="text-xs text-muted">{new Date(msg.date).toLocaleString()}</p>
                         </div>
                         <p className="text-sm font-semibold text-cream">Subject: {msg.subject}</p>
@@ -198,7 +198,7 @@ export default function Admin() {
                     {feedbacks.map((fb, i) => (
                       <div key={i} className="rounded-2xl border border-line bg-surface-2 p-5">
                         <div className="flex items-center justify-between border-b border-line pb-3 mb-3">
-                          <p className="font-bold text-[#EE9096]">Anonymous Visitor</p>
+                          <p className="font-bold text-neon-pink">Anonymous Visitor</p>
                           <p className="text-xs text-muted">{new Date(fb.createdAt).toLocaleString()}</p>
                         </div>
                         <p className="text-sm leading-relaxed text-cream">{fb.message}</p>
@@ -218,19 +218,19 @@ export default function Admin() {
                   {/* Language Selector */}
                   <div className="rounded-2xl border border-line bg-surface-2 p-6">
                     <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-cream">
-                      <FiGlobe className="text-[#FDC700]" /> Portfolio Language
+                      <FiGlobe className="text-neon-yellow" /> Portfolio Language
                     </h3>
                     <p className="mb-5 text-sm text-ink-soft">Select the language you want your portfolio to display.</p>
                     <div className="flex flex-wrap gap-3">
-                      <button className="rounded-full border border-[#147CBF] bg-[#147CBF]/10 px-6 py-2.5 text-sm font-bold text-[#147CBF]">English</button>
-                      <button className="rounded-full border border-line bg-surface px-6 py-2.5 text-sm font-medium text-muted transition-colors hover:text-cream hover:border-[#EE9096]">Dari (دری)</button>
-                      <button className="rounded-full border border-line bg-surface px-6 py-2.5 text-sm font-medium text-muted transition-colors hover:text-cream hover:border-[#EE9096]">Pashto (پښتو)</button>
+                      <button className="rounded-full border border-neon-blue bg-neon-blue/10 px-6 py-2.5 text-sm font-bold text-neon-blue">English</button>
+                      <button className="rounded-full border border-line bg-surface px-6 py-2.5 text-sm font-medium text-muted transition-colors hover:text-cream hover:border-neon-pink">Dari (دری)</button>
+                      <button className="rounded-full border border-line bg-surface px-6 py-2.5 text-sm font-medium text-muted transition-colors hover:text-cream hover:border-neon-pink">Pashto (پښتو)</button>
                     </div>
                   </div>
 
                   {/* Danger Zone */}
-                  <div className="rounded-2xl border border-[#B60300]/30 bg-[#B60300]/5 p-6">
-                    <h3 className="mb-2 flex items-center gap-2 text-lg font-bold text-[#B60300]">
+                  <div className="rounded-2xl border border-neon-red/30 bg-neon-red/5 p-6">
+                    <h3 className="mb-2 flex items-center gap-2 text-lg font-bold text-neon-red">
                       <FiTrash2 /> Danger Zone
                     </h3>
                     <p className="mb-5 text-sm text-ink-soft">
@@ -239,7 +239,7 @@ export default function Admin() {
                     </p>
                     <button 
                       onClick={clearAllData}
-                      className="rounded-xl bg-[#B60300] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-red-700 hover:shadow-[0_0_20px_rgba(182,3,0,0.4)]"
+                      className="rounded-xl bg-neon-red px-6 py-3 text-sm font-bold text-white transition-all hover:bg-red-700 hover:shadow-[0_0_20px_rgba(182,3,0,0.4)]"
                     >
                       Clear All Saved Data
                     </button>

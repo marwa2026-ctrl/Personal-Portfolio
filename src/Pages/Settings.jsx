@@ -202,17 +202,17 @@ export default function Settings() {
   if (!isAuthenticated) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-bg px-4 transition-colors duration-300">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md rounded-[2rem] border border-line bg-surface p-8 shadow-lg">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md rounded-4xl border border-line bg-surface p-8 shadow-lg">
           <div className="mb-8 flex flex-col items-center text-center">
-            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-[#147CBF]/10 text-[#147CBF]">
+            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-neon-blue/10 text-neon-blue">
               <FiUser size={32} />
             </span>
             <h1 className="mt-5 text-2xl font-bold text-cream">Admin Access</h1>
             <p className="mt-2 text-sm text-ink-soft">Enter password to continue</p>
           </div>
           <form onSubmit={handleLogin} className="space-y-5">
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password..." className="w-full rounded-2xl border border-line bg-surface-2 px-5 py-4 text-cream outline-none focus:border-[#147CBF]" />
-            <button type="submit" className="w-full rounded-2xl bg-gradient-to-r from-[#EE9096] to-[#147CBF] py-4 font-bold text-white hover:opacity-90">Unlock Dashboard</button>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password..." className="w-full rounded-2xl border border-line bg-surface-2 px-5 py-4 text-cream outline-none focus:border-neon-blue" />
+            <button type="submit" className="w-full rounded-2xl bg-linear-to-r from-neon-pink to-neon-blue py-4 font-bold text-white hover:opacity-90">Unlock Dashboard</button>
           </form>
         </motion.div>
       </div>
@@ -226,34 +226,34 @@ export default function Settings() {
         
         {/* Sidebar */}
         <div className="w-full shrink-0 md:w-64">
-          <div className="flex h-full flex-col rounded-[2rem] border border-line bg-surface p-5 shadow-lg">
+          <div className="flex h-full flex-col rounded-4xl border border-line bg-surface p-5 shadow-lg">
             <div className="mb-6 border-b border-line pb-4">
-              <h2 className="text-xs font-bold uppercase tracking-widest text-[#EE9096]">Admin Menu</h2>
+              <h2 className="text-xs font-bold uppercase tracking-widest text-neon-pink">Admin Menu</h2>
             </div>
             
             <div className="flex flex-1 flex-col gap-2 overflow-y-auto">
-              <button onClick={() => setActiveTab("messages")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "messages" ? "bg-[#147CBF]/10 text-[#147CBF]" : "text-cream hover:bg-surface-2"}`}>
+              <button onClick={() => setActiveTab("messages")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "messages" ? "bg-neon-blue/10 text-neon-blue" : "text-cream hover:bg-surface-2"}`}>
                 <FiMail size={18} /> Messages
               </button>
-              <button onClick={() => setActiveTab("feedback")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "feedback" ? "bg-[#EE9096]/10 text-[#EE9096]" : "text-cream hover:bg-surface-2"}`}>
+              <button onClick={() => setActiveTab("feedback")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "feedback" ? "bg-neon-pink/10 text-neon-pink" : "text-cream hover:bg-surface-2"}`}>
                 <FiMessageSquare size={18} /> Feedback
               </button>
-              <button onClick={() => setActiveTab("education")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "education" ? "bg-[#77AB00]/10 text-[#77AB00]" : "text-cream hover:bg-surface-2"}`}>
+              <button onClick={() => setActiveTab("education")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "education" ? "bg-neon-green/10 text-neon-green" : "text-cream hover:bg-surface-2"}`}>
                 <FiBookOpen size={18} /> Education
               </button>
-              <button onClick={() => setActiveTab("projects")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "projects" ? "bg-[#EF8503]/10 text-[#EF8503]" : "text-cream hover:bg-surface-2"}`}>
+              <button onClick={() => setActiveTab("projects")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "projects" ? "bg-neon-orange/10 text-neon-orange" : "text-cream hover:bg-surface-2"}`}>
                 <FiFolder size={18} /> Projects
               </button>
-              <button onClick={() => setActiveTab("preferences")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "preferences" ? "bg-[#FDC700]/10 text-[#FDC700]" : "text-cream hover:bg-surface-2"}`}>
+              <button onClick={() => setActiveTab("preferences")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "preferences" ? "bg-neon-yellow/10 text-neon-yellow" : "text-cream hover:bg-surface-2"}`}>
                 <FiGlobe size={18} /> Preferences
               </button>
-              <button onClick={() => setActiveTab("password")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "password" ? "bg-[#147CBF]/10 text-[#147CBF]" : "text-cream hover:bg-surface-2"}`}>
+              <button onClick={() => setActiveTab("password")} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold ${activeTab === "password" ? "bg-neon-blue/10 text-neon-blue" : "text-cream hover:bg-surface-2"}`}>
                 <FiKey size={18} /> Security
               </button>
             </div>
 
             <div className="mt-6 border-t border-line pt-4">
-              <button onClick={() => setIsAuthenticated(false)} className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#B60300]/10 px-4 py-3 text-sm font-bold text-[#B60300] transition-colors hover:bg-[#B60300] hover:text-white">
+              <button onClick={() => setIsAuthenticated(false)} className="flex w-full items-center justify-center gap-2 rounded-xl bg-neon-red/10 px-4 py-3 text-sm font-bold text-neon-red transition-colors hover:bg-neon-red hover:text-white">
                 <FiLogOut size={18} /> Log Out
               </button>
             </div>
@@ -261,7 +261,7 @@ export default function Settings() {
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 rounded-[2rem] border border-line bg-surface p-6 shadow-lg sm:p-8">
+        <div className="flex-1 rounded-4xl border border-line bg-surface p-6 shadow-lg sm:p-8">
           <AnimatePresence mode="wait">
             
             {/* 📩 Messages Tab */}
@@ -272,7 +272,7 @@ export default function Settings() {
                   <div className="space-y-4">
                     {contactMessages.map((msg, i) => (
                       <div key={i} className="rounded-2xl border border-line bg-surface-2 p-5">
-                        <p className="font-bold text-[#147CBF]">{msg.name} ({msg.email})</p>
+                        <p className="font-bold text-neon-blue">{msg.name} ({msg.email})</p>
                         <p className="text-xs text-muted">Subject: {msg.subject}</p>
                         <p className="mt-2 text-sm text-cream">{msg.message}</p>
                       </div>
@@ -303,18 +303,18 @@ export default function Settings() {
             {activeTab === "education" && (
               <motion.div key="education" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                 <h1 className="mb-6 flex items-center gap-2 font-display text-2xl font-bold text-cream">
-                  <FiBookOpen className="text-[#77AB00]" /> Manage Education
+                  <FiBookOpen className="text-neon-green" /> Manage Education
                 </h1>
                 
                 <div className="mb-8 rounded-2xl border border-line bg-surface-2 p-5">
                   <div className="grid gap-3 sm:grid-cols-2">
-                    <input type="text" placeholder="School/Platform" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-[#77AB00]" onChange={(e) => setNewEdu({...newEdu, title: e.target.value})} value={newEdu.title} />
-                    <input type="text" placeholder="Course/Subject" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-[#77AB00]" onChange={(e) => setNewEdu({...newEdu, sub: e.target.value})} value={newEdu.sub} />
-                    <input type="text" placeholder="Year" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-[#77AB00]" onChange={(e) => setNewEdu({...newEdu, year: e.target.value})} value={newEdu.year} />
-                    <input type="text" placeholder="Short Description" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-[#77AB00]" onChange={(e) => setNewEdu({...newEdu, desc: e.target.value})} value={newEdu.desc} />
+                    <input type="text" placeholder="School/Platform" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-neon-green" onChange={(e) => setNewEdu({...newEdu, title: e.target.value})} value={newEdu.title} />
+                    <input type="text" placeholder="Course/Subject" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-neon-green" onChange={(e) => setNewEdu({...newEdu, sub: e.target.value})} value={newEdu.sub} />
+                    <input type="text" placeholder="Year" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-neon-green" onChange={(e) => setNewEdu({...newEdu, year: e.target.value})} value={newEdu.year} />
+                    <input type="text" placeholder="Short Description" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-neon-green" onChange={(e) => setNewEdu({...newEdu, desc: e.target.value})} value={newEdu.desc} />
                   </div>
                   <div className="mt-4 flex gap-3">
-                    <button onClick={handleSaveEdu} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#77AB00] py-2.5 text-sm font-bold text-white hover:opacity-90">
+                    <button onClick={handleSaveEdu} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-neon-green py-2.5 text-sm font-bold text-white hover:opacity-90">
                       {editingEduId ? <><FiCheck /> Save Changes</> : <><FiPlus /> Add Education</>}
                     </button>
                     {editingEduId && (
@@ -330,16 +330,16 @@ export default function Settings() {
                     <div key={edu.id} className={`flex flex-col gap-4 rounded-xl border p-4 sm:flex-row sm:items-center sm:justify-between transition-all ${edu.visible ? 'border-line bg-surface' : 'border-line/50 bg-surface/50 opacity-60'}`}>
                       <div>
                         <div className="flex items-center gap-2">
-                          <p className="font-bold text-cream">{edu.title} <span className="text-[#77AB00]">- {edu.sub}</span></p>
-                          {!edu.visible && <span className="rounded bg-[#B60300]/20 px-2 py-0.5 text-[10px] font-bold text-[#B60300] uppercase">Hidden</span>}
+                          <p className="font-bold text-cream">{edu.title} <span className="text-neon-green">- {edu.sub}</span></p>
+                          {!edu.visible && <span className="rounded bg-neon-red/20 px-2 py-0.5 text-[10px] font-bold text-neon-red uppercase">Hidden</span>}
                         </div>
                         <p className="text-xs text-muted">{edu.year} | {edu.desc}</p>
                       </div>
                       <div className="flex gap-2">
-                        <button onClick={() => handleEditEdu(edu)} className="flex items-center gap-1 rounded-lg bg-[#FDC700]/10 px-3 py-1.5 text-xs font-bold text-[#FDC700] hover:bg-[#FDC700] hover:text-bg transition-colors">
+                        <button onClick={() => handleEditEdu(edu)} className="flex items-center gap-1 rounded-lg bg-neon-yellow/10 px-3 py-1.5 text-xs font-bold text-neon-yellow hover:bg-neon-yellow hover:text-bg transition-colors">
                           <FiEdit2 size={14} /> Edit
                         </button>
-                        <button onClick={() => handleToggleEdu(edu.id)} className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-bold transition-colors ${edu.visible ? 'bg-[#B60300]/10 text-[#B60300] hover:bg-[#B60300] hover:text-white' : 'bg-[#77AB00]/10 text-[#77AB00] hover:bg-[#77AB00] hover:text-white'}`}>
+                        <button onClick={() => handleToggleEdu(edu.id)} className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-bold transition-colors ${edu.visible ? 'bg-neon-red/10 text-neon-red hover:bg-neon-red hover:text-white' : 'bg-neon-green/10 text-neon-green hover:bg-neon-green hover:text-white'}`}>
                           {edu.visible ? <><FiX size={14} /> Remove</> : <><FiRefreshCw size={14} /> Restore</>}
                         </button>
                       </div>
@@ -353,17 +353,17 @@ export default function Settings() {
             {activeTab === "projects" && (
               <motion.div key="projects" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                 <h1 className="mb-6 flex items-center gap-2 font-display text-2xl font-bold text-cream">
-                  <FiFolder className="text-[#EF8503]" /> Manage Projects
+                  <FiFolder className="text-neon-orange" /> Manage Projects
                 </h1>
                 
                 <div className="mb-8 rounded-2xl border border-line bg-surface-2 p-5">
                   <div className="grid gap-3 sm:grid-cols-2">
-                    <input type="text" placeholder="Project Title" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-[#EF8503]" onChange={(e) => setNewProj({...newProj, title: e.target.value})} value={newProj.title} />
-                    <input type="text" placeholder="Tech Stack" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-[#EF8503]" onChange={(e) => setNewProj({...newProj, tech: e.target.value})} value={newProj.tech} />
-                    <input type="text" placeholder="Short Description" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-[#EF8503] sm:col-span-2" onChange={(e) => setNewProj({...newProj, desc: e.target.value})} value={newProj.desc} />
+                    <input type="text" placeholder="Project Title" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-neon-orange" onChange={(e) => setNewProj({...newProj, title: e.target.value})} value={newProj.title} />
+                    <input type="text" placeholder="Tech Stack" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-neon-orange" onChange={(e) => setNewProj({...newProj, tech: e.target.value})} value={newProj.tech} />
+                    <input type="text" placeholder="Short Description" className="rounded-xl border border-line bg-surface px-4 py-2 text-sm text-cream outline-none focus:border-neon-orange sm:col-span-2" onChange={(e) => setNewProj({...newProj, desc: e.target.value})} value={newProj.desc} />
                   </div>
                   <div className="mt-4 flex gap-3">
-                    <button onClick={handleSaveProj} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#EF8503] py-2.5 text-sm font-bold text-white hover:opacity-90">
+                    <button onClick={handleSaveProj} className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-neon-orange py-2.5 text-sm font-bold text-white hover:opacity-90">
                       {editingProjId ? <><FiCheck /> Save Changes</> : <><FiPlus /> Add Project</>}
                     </button>
                     {editingProjId && (
@@ -380,16 +380,16 @@ export default function Settings() {
                       <div>
                         <div className="flex items-center gap-2">
                           <p className="font-bold text-cream">{proj.title}</p>
-                          {!proj.visible && <span className="rounded bg-[#B60300]/20 px-2 py-0.5 text-[10px] font-bold text-[#B60300] uppercase">Hidden</span>}
+                          {!proj.visible && <span className="rounded bg-neon-red/20 px-2 py-0.5 text-[10px] font-bold text-neon-red uppercase">Hidden</span>}
                         </div>
-                        <p className="text-xs text-[#EF8503]">{proj.tech}</p>
+                        <p className="text-xs text-neon-orange">{proj.tech}</p>
                         <p className="text-sm text-muted mt-1">{proj.desc}</p>
                       </div>
                       <div className="flex shrink-0 gap-2">
-                        <button onClick={() => handleEditProj(proj)} className="flex items-center gap-1 rounded-lg bg-[#FDC700]/10 px-3 py-1.5 text-xs font-bold text-[#FDC700] hover:bg-[#FDC700] hover:text-bg transition-colors">
+                        <button onClick={() => handleEditProj(proj)} className="flex items-center gap-1 rounded-lg bg-neon-yellow/10 px-3 py-1.5 text-xs font-bold text-neon-yellow hover:bg-neon-yellow hover:text-bg transition-colors">
                           <FiEdit2 size={14} /> Edit
                         </button>
-                        <button onClick={() => handleToggleProj(proj.id)} className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-bold transition-colors ${proj.visible ? 'bg-[#B60300]/10 text-[#B60300] hover:bg-[#B60300] hover:text-white' : 'bg-[#77AB00]/10 text-[#77AB00] hover:bg-[#77AB00] hover:text-white'}`}>
+                        <button onClick={() => handleToggleProj(proj.id)} className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-bold transition-colors ${proj.visible ? 'bg-neon-red/10 text-neon-red hover:bg-neon-red hover:text-white' : 'bg-neon-green/10 text-neon-green hover:bg-neon-green hover:text-white'}`}>
                           {proj.visible ? <><FiX size={14} /> Remove</> : <><FiRefreshCw size={14} /> Restore</>}
                         </button>
                       </div>
@@ -407,26 +407,26 @@ export default function Settings() {
                     <h3 className="text-lg font-bold text-cream">Appearance</h3>
                     <p className="text-sm text-ink-soft">Toggle between light and dark mode.</p>
                   </div>
-                  <button onClick={toggleTheme} className="flex h-12 w-12 items-center justify-center rounded-full border border-line bg-surface text-cream transition-all hover:border-[#FDC700] hover:text-[#FDC700]">
+                  <button onClick={toggleTheme} className="flex h-12 w-12 items-center justify-center rounded-full border border-line bg-surface text-cream transition-all hover:border-neon-yellow hover:text-neon-yellow">
                     {isDark ? <FiSun size={24} /> : <FiMoon size={24} />}
                   </button>
                 </div>
                 <div className="rounded-2xl border border-line bg-surface-2 p-6">
                   <h3 className="mb-4 text-lg font-bold text-cream">Language Preference</h3>
                   <div className="flex flex-wrap gap-3">
-                    <button onClick={() => saveLanguage("en")} className={`rounded-full border px-6 py-2.5 text-sm font-bold transition-all ${language === "en" ? "border-[#147CBF] bg-[#147CBF]/10 text-[#147CBF]" : "border-line text-muted hover:text-cream"}`}>English</button>
-                    <button onClick={() => saveLanguage("dr")} className={`rounded-full border px-6 py-2.5 text-sm font-bold transition-all ${language === "dr" ? "border-[#147CBF] bg-[#147CBF]/10 text-[#147CBF]" : "border-line text-muted hover:text-cream"}`}>Dari (دری)</button>
-                    <button onClick={() => saveLanguage("ps")} className={`rounded-full border px-6 py-2.5 text-sm font-bold transition-all ${language === "ps" ? "border-[#147CBF] bg-[#147CBF]/10 text-[#147CBF]" : "border-line text-muted hover:text-cream"}`}>Pashto (پښتو)</button>
+                    <button onClick={() => saveLanguage("en")} className={`rounded-full border px-6 py-2.5 text-sm font-bold transition-all ${language === "en" ? "border-neon-blue bg-neon-blue/10 text-neon-blue" : "border-line text-muted hover:text-cream"}`}>English</button>
+                    <button onClick={() => saveLanguage("dr")} className={`rounded-full border px-6 py-2.5 text-sm font-bold transition-all ${language === "dr" ? "border-neon-blue bg-neon-blue/10 text-neon-blue" : "border-line text-muted hover:text-cream"}`}>Dari (دری)</button>
+                    <button onClick={() => saveLanguage("ps")} className={`rounded-full border px-6 py-2.5 text-sm font-bold transition-all ${language === "ps" ? "border-neon-blue bg-neon-blue/10 text-neon-blue" : "border-line text-muted hover:text-cream"}`}>Pashto (پښتو)</button>
                   </div>
                 </div>
-                <div className="mt-8 rounded-2xl border border-[#B60300]/30 bg-[#B60300]/5 p-6">
-                  <h3 className="mb-2 flex items-center gap-2 text-lg font-bold text-[#B60300]"><FiTrash2 /> Danger Zone</h3>
+                <div className="mt-8 rounded-2xl border border-neon-red/30 bg-neon-red/5 p-6">
+                  <h3 className="mb-2 flex items-center gap-2 text-lg font-bold text-neon-red"><FiTrash2 /> Danger Zone</h3>
                   <button onClick={() => {
                     if(window.confirm("Delete ALL data including hidden items? This cannot be undone.")) {
                       localStorage.clear();
                       window.location.reload();
                     }
-                  }} className="rounded-xl bg-[#B60300] px-6 py-3 text-sm font-bold text-white hover:bg-red-700">
+                  }} className="rounded-xl bg-neon-red px-6 py-3 text-sm font-bold text-white hover:bg-red-700">
                     Reset All Website Data
                   </button>
                 </div>
@@ -437,29 +437,29 @@ export default function Settings() {
             {activeTab === "password" && (
               <motion.div key="password" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                 <h1 className="mb-6 flex items-center gap-2 font-display text-2xl font-bold text-cream">
-                  <FiKey className="text-[#147CBF]" /> Security Settings
+                  <FiKey className="text-neon-blue" /> Security Settings
                 </h1>
                 <div className="rounded-2xl border border-line bg-surface-2 p-6 max-w-lg">
                   <form onSubmit={handleChangePassword} className="space-y-5">
                     <div>
                       <label className="mb-2 block text-sm font-bold text-cream">Current Password</label>
-                      <input type="password" value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-cream outline-none focus:border-[#147CBF]" placeholder="Enter current password..." required />
+                      <input type="password" value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-cream outline-none focus:border-neon-blue" placeholder="Enter current password..." required />
                     </div>
                     <div>
                       <label className="mb-2 block text-sm font-bold text-cream">New Password</label>
-                      <input type="password" value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-cream outline-none focus:border-[#147CBF]" placeholder="Enter new password..." required />
+                      <input type="password" value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-cream outline-none focus:border-neon-blue" placeholder="Enter new password..." required />
                     </div>
                     <div>
                       <label className="mb-2 block text-sm font-bold text-cream">Confirm New Password</label>
-                      <input type="password" value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-cream outline-none focus:border-[#147CBF]" placeholder="Confirm new password..." required />
+                      <input type="password" value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-cream outline-none focus:border-neon-blue" placeholder="Confirm new password..." required />
                     </div>
                     {passwordStatus.msg && (
-                      <div className={`flex items-center gap-2 rounded-xl p-4 text-sm font-medium ${passwordStatus.type === "error" ? "bg-[#B60300]/10 text-[#B60300]" : "bg-[#77AB00]/10 text-[#77AB00]"}`}>
+                      <div className={`flex items-center gap-2 rounded-xl p-4 text-sm font-medium ${passwordStatus.type === "error" ? "bg-neon-red/10 text-neon-red" : "bg-neon-green/10 text-neon-green"}`}>
                         {passwordStatus.type === "success" ? <FiCheckCircle /> : <FiX />}
                         {passwordStatus.msg}
                       </div>
                     )}
-                    <button type="submit" className="w-full rounded-xl bg-[#147CBF] py-3 text-sm font-bold text-white hover:bg-[#1168a0] transition-colors">
+                    <button type="submit" className="w-full rounded-xl bg-neon-blue py-3 text-sm font-bold text-white hover:bg-[#1168a0] transition-colors">
                       Update Password
                     </button>
                   </form>

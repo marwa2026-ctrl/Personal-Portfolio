@@ -42,7 +42,7 @@ export default function SendMessageButton({
         duration: 0.42,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="relative flex h-[76px] w-[88px] shrink-0 items-center justify-center overflow-visible rounded-[27px] border border-white/25 bg-white/15 text-white shadow-[0_8px_25px_rgba(0,0,0,0.22),inset_0_1px_1px_rgba(255,255,255,0.25)] backdrop-blur-xl transition-colors duration-200 hover:bg-white/25 disabled:cursor-not-allowed"
+      className="relative flex h-19 w-22 shrink-0 items-center justify-center overflow-visible rounded-[27px] border border-white/25 bg-white/15 text-white shadow-[0_8px_25px_rgba(0,0,0,0.22),inset_0_1px_1px_rgba(255,255,255,0.25)] backdrop-blur-xl transition-colors duration-200 hover:bg-white/25 disabled:cursor-not-allowed"
     >
       {/* Curved airplane flight trail */}
       <svg

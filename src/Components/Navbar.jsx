@@ -87,7 +87,7 @@ export default function Navbar() {
       className="sticky top-0 z-50 w-full border-b border-line/20 bg-bg/80 text-cream backdrop-blur-xl transition-colors duration-300"
     >
       {/* ✨ Glow line at the bottom */}
-      <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#EE9096]/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 h-px w-full bg-linear-to-r from-transparent via-neon-pink/50 to-transparent" />
 
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
         
@@ -97,7 +97,7 @@ export default function Navbar() {
           onClick={closeMenu}
           className="group relative text-xl font-bold tracking-tight sm:text-2xl"
         >
-          <span className="bg-gradient-to-r from-[#EE9096] to-[#147CBF] bg-[length:200%_auto] bg-clip-text text-transparent transition-all duration-500 group-hover:bg-[position:100%_center] drop-shadow-[0_0_10px_rgba(238,144,150,0.4)] group-hover:drop-shadow-[0_0_15px_rgba(20,124,191,0.6)]">
+          <span className="bg-linear-to-r from-neon-pink to-neon-blue bg-size-[200%_auto] bg-clip-text text-transparent transition-all duration-500 group-hover:bg-position-[100%_center] drop-shadow-[0_0_10px_rgba(238,144,150,0.4)] group-hover:drop-shadow-[0_0_15px_rgba(20,124,191,0.6)]">
             {site.name}
           </span>
         </Link>
@@ -120,16 +120,16 @@ export default function Navbar() {
                     isHovered={hoveredLink === item.path}
                     className={
                       isActive 
-                        ? "text-[#147CBF]" 
-                        : "text-muted group-hover:text-[#EE9096]"
+                        ? "text-neon-blue" 
+                        : "text-muted group-hover:text-neon-pink"
                     }
                   />
                   {/* Text: Gradient applied here */}
                   <span
                     className={`transition-all duration-300 ${
                       isActive
-                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#EE9096] to-[#147CBF] font-bold drop-shadow-[0_0_8px_rgba(238,144,150,0.3)]"
-                        : "text-muted group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#EE9096] group-hover:to-[#147CBF]"
+                        ? "text-transparent bg-clip-text bg-linear-to-r from-neon-pink to-neon-blue font-bold drop-shadow-[0_0_8px_rgba(238,144,150,0.3)]"
+                        : "text-muted group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-neon-pink group-hover:to-neon-blue"
                     }`}
                   >
                     {item.label}
@@ -144,7 +144,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={toggleTheme}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-cream transition-all duration-300 hover:border-[#147CBF] hover:text-[#147CBF] hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.3)]"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-cream transition-all duration-300 hover:border-neon-blue hover:text-neon-blue hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.3)]"
             >
               {isDark ? <FiSun size={19} /> : <FiMoon size={19} />}
             </button>
@@ -156,7 +156,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-cream transition-all duration-300 hover:border-[#147CBF] hover:text-[#147CBF] hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.3)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-cream transition-all duration-300 hover:border-neon-blue hover:text-neon-blue hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.3)]"
           >
             {isDark ? <FiSun size={19} /> : <FiMoon size={19} />}
           </button>
@@ -164,7 +164,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-cream transition-all duration-300 hover:border-[#EE9096] hover:text-[#EE9096] hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(238,144,150,0.3)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-cream transition-all duration-300 hover:border-neon-pink hover:text-neon-pink hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(238,144,150,0.3)]"
           >
             {isMenuOpen ? <FiX size={21} /> : <FiMenu size={21} />}
           </button>
@@ -192,7 +192,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `group flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-all duration-300 ${
                       isActive
-                        ? "bg-surface-2 border-l-2 border-[#147CBF]"
+                        ? "bg-surface-2 border-l-2 border-neon-blue"
                         : "text-muted hover:bg-surface border-l-2 border-transparent"
                     }`
                   }
@@ -206,16 +206,16 @@ export default function Navbar() {
                         isHovered={hoveredLink === item.path}
                         className={
                           isActive 
-                            ? "text-[#147CBF]" 
-                            : "text-muted group-hover:text-[#EE9096]"
+                            ? "text-neon-blue" 
+                            : "text-muted group-hover:text-neon-pink"
                         }
                       />
                       {/* Text: Gradient */}
                       <span
                         className={`transition-all duration-300 ${
                           isActive
-                            ? "text-transparent bg-clip-text bg-gradient-to-r from-[#EE9096] to-[#147CBF] font-bold"
-                            : "group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#EE9096] group-hover:to-[#147CBF]"
+                            ? "text-transparent bg-clip-text bg-linear-to-r from-neon-pink to-neon-blue font-bold"
+                            : "group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-neon-pink group-hover:to-neon-blue"
                         }`}
                       >
                         {item.label}

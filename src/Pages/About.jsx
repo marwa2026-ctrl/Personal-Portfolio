@@ -269,7 +269,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center sm:mb-16"
         >
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#EE9096]!">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-neon-pink!">
             {aboutEyebrow || "02 — ABOUT ME"}
           </p>
 
@@ -283,7 +283,7 @@ export default function About() {
             </p>
           )}
 
-          <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-[#EE9096] to-[#147CBF] shadow-[0_0_10px_rgba(238,144,150,0.5)]" />
+          <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-linear-to-r from-neon-pink to-neon-blue shadow-[0_0_10px_rgba(238,144,150,0.5)]" />
         </motion.div>
 
         {/* ── PHOTO AND INFORMATION ───────────────── */}
@@ -312,7 +312,7 @@ export default function About() {
                   ? "Return to the introduction"
                   : "Show my education and skills"
               }
-              className="group relative block w-full overflow-hidden rounded-3xl border border-line bg-surface text-left shadow-[0_25px_70px_-25px_rgba(0,0,0,0.5)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#147CBF] transition-all duration-300 hover:border-[#EE9096] hover:shadow-[0_0_30px_rgba(238,144,150,0.2)]"
+              className="group relative block w-full overflow-hidden rounded-3xl border border-line bg-surface text-left shadow-[0_25px_70px_-25px_rgba(0,0,0,0.5)] focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-blue transition-all duration-300 hover:border-neon-pink hover:shadow-[0_0_30px_rgba(238,144,150,0.2)]"
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.99 }}
             >
@@ -320,11 +320,11 @@ export default function About() {
                 <img
                   src={aboutPhoto}
                   alt={aboutPhotoAlt}
-                  className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[520px] lg:h-[580px]"
+                  className="h-105 w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-130 lg:h-145"
                 />
               ) : (
-                <div className="flex h-[420px] w-full flex-col items-center justify-center gap-4 text-cream sm:h-[520px] lg:h-[580px]">
-                  <FiUser size={64} className="text-[#147CBF]" />
+                <div className="flex h-105 w-full flex-col items-center justify-center gap-4 text-cream sm:h-130 lg:h-145">
+                  <FiUser size={64} className="text-neon-blue" />
                   <p className="text-sm text-ink-soft">
                     Add your photo in portfolio.js
                   </p>
@@ -332,7 +332,7 @@ export default function About() {
               )}
 
               {/* Photo overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-20 sm:px-7 sm:pb-7">
+              <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-20 sm:px-7 sm:pb-7">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xl font-semibold text-white sm:text-2xl">
@@ -346,7 +346,7 @@ export default function About() {
                     </p>
                   </div>
 
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/15 text-white backdrop-blur-sm transition group-hover:bg-[#EE9096] group-hover:border-[#EE9096] group-hover:text-white group-hover:shadow-[0_0_15px_rgba(238,144,150,0.5)]">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/15 text-white backdrop-blur-sm transition group-hover:bg-neon-pink group-hover:border-neon-pink group-hover:text-white group-hover:shadow-[0_0_15px_rgba(238,144,150,0.5)]">
                     {isFlipped ? (
                       <FiArrowLeft size={22} />
                     ) : (
@@ -383,12 +383,12 @@ export default function About() {
                 >
                   <div className="rounded-3xl border border-line bg-surface p-6 sm:p-8 lg:p-9 shadow-lg">
                     <div className="mb-6 flex items-center gap-4">
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-2 text-[#147CBF] shadow-[0_0_15px_rgba(20,124,191,0.2)]">
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-2 text-neon-blue shadow-[0_0_15px_rgba(20,124,191,0.2)]">
                         <FiUser size={22} />
                       </span>
 
                       <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#EE9096]!">
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-pink!">
                           Nice to meet you
                         </p>
 
@@ -400,7 +400,7 @@ export default function About() {
 
                     <p className="text-base leading-8 text-cream">
                       I'm a passionate web developer based in{" "}
-                      <span className="font-bold text-[#147CBF]!">
+                      <span className="font-bold text-neon-blue!">
                         {siteLocation}
                       </span>
                       , focused on creating clean, responsive, and
@@ -416,25 +416,25 @@ export default function About() {
                     {/* Personal details */}
                     <div className="mt-8 grid gap-4 sm:grid-cols-2">
 
-                      <div className="rounded-2xl border border-line bg-surface-2 p-5 transition-colors hover:border-[#FDC700]">
+                      <div className="rounded-2xl border border-line bg-surface-2 p-5 transition-colors hover:border-neon-yellow">
                         <FiMapPin
                           size={22}
-                          className="mb-4 text-[#FDC700]!"
+                          className="mb-4 text-neon-yellow!"
                         />
 
                         <p className="text-xs font-bold uppercase tracking-[0.15em] text-ink-soft">
                           Location
                         </p>
 
-                        <p className="mt-2 break-words text-sm font-semibold leading-6 text-cream">
+                        <p className="mt-2 wrap-break-word text-sm font-semibold leading-6 text-cream">
                           {siteLocation}
                         </p>
                       </div>
 
-                      <div className="rounded-2xl border border-line bg-surface-2 p-5 transition-colors hover:border-[#77AB00]">
+                      <div className="rounded-2xl border border-line bg-surface-2 p-5 transition-colors hover:border-neon-green">
                         <FiMail
                           size={22}
-                          className="mb-4 text-[#77AB00]!"
+                          className="mb-4 text-neon-green!"
                         />
 
                         <p className="text-xs font-bold uppercase tracking-[0.15em] text-ink-soft">
@@ -447,7 +447,7 @@ export default function About() {
                               ? `mailto:${siteEmail}`
                               : undefined
                           }
-                          className="mt-2 block break-all text-sm font-semibold leading-6 text-cream underline-offset-4 transition hover:text-[#77AB00]! hover:underline"
+                          className="mt-2 block break-all text-sm font-semibold leading-6 text-cream underline-offset-4 transition hover:text-neon-green! hover:underline"
                         >
                           {siteEmail || "Add your email"}
                         </a>
@@ -458,7 +458,7 @@ export default function About() {
                     <div className="mt-8">
                       <Link
                         to="/projects"
-                        className="inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#EE9096] to-[#147CBF] px-7 py-3.5 text-sm font-bold text-white! transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_20px_rgba(20,124,191,0.4)]"
+                        className="inline-flex items-center justify-center gap-3 rounded-full bg-linear-to-r from-neon-pink to-neon-blue px-7 py-3.5 text-sm font-bold text-white! transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_20px_rgba(20,124,191,0.4)]"
                       >
                         View My Work
                         <FiArrowRight size={18} />
@@ -479,12 +479,12 @@ export default function About() {
                   {/* Education and expandable skills */}
                   <div className="rounded-3xl border border-line bg-surface p-6 sm:p-8 shadow-lg">
                     <div className="mb-6 flex items-center gap-3">
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-2 text-[#EE9096] shadow-[0_0_15px_rgba(238,144,150,0.2)]">
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-2 text-neon-pink shadow-[0_0_15px_rgba(238,144,150,0.2)]">
                         <FiBookOpen size={22} />
                       </span>
 
                       <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#147CBF]!">
+                        <p className="text-xs font-bold uppercase tracking-[0.15em] text-neon-blue!">
                           My Learning Journey
                         </p>
 
@@ -520,7 +520,7 @@ export default function About() {
                               aria-expanded={isOpen}
                               className="flex w-full items-center gap-4 p-4 text-left transition hover:bg-surface-3 sm:p-5"
                             >
-                              <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-surface-3 ${index === 0 ? 'text-[#FDC700]' : index === 1 ? 'text-[#77AB00]' : 'text-[#147CBF]'}`}>
+                              <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-surface-3 ${index === 0 ? 'text-neon-yellow' : index === 1 ? 'text-neon-green' : 'text-neon-blue'}`}>
                                 <Icon size={20} />
                               </span>
 
@@ -537,7 +537,7 @@ export default function About() {
                               <FiChevronDown
                                 size={20}
                                 className={`shrink-0 text-muted transition-transform duration-300 ${
-                                  isOpen ? "rotate-180 text-[#EE9096]!" : ""
+                                  isOpen ? "rotate-180 text-neon-pink!" : ""
                                 }`}
                               />
                             </button>
@@ -566,7 +566,7 @@ export default function About() {
                                 >
                                   <div className="border-t border-line px-5 py-5">
                                     <p className="mb-4 flex items-center gap-2 text-sm font-bold text-cream">
-                                      <FiCode size={18} className="text-[#EE9096]!" />
+                                      <FiCode size={18} className="text-neon-pink!" />
                                       Skills Learned
                                     </p>
 
@@ -579,7 +579,7 @@ export default function About() {
                                           >
                                             <FiCheckCircle
                                               size={17}
-                                              className="mt-1 shrink-0 text-[#77AB00]!"
+                                              className="mt-1 shrink-0 text-neon-green!"
                                             />
                                             <span>{skill}</span>
                                           </li>
@@ -599,7 +599,7 @@ export default function About() {
                   {/* Technical interests */}
                   <div className="rounded-3xl border border-line bg-surface p-6 sm:p-8 shadow-lg">
                     <div className="mb-5 flex items-center gap-3">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-2 text-[#147CBF] shadow-[0_0_15px_rgba(20,124,191,0.2)]">
+                      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-2 text-neon-blue shadow-[0_0_15px_rgba(20,124,191,0.2)]">
                         <FiMonitor size={20} />
                       </span>
 
@@ -618,7 +618,7 @@ export default function About() {
                     <div className="mt-5 flex items-center gap-3 rounded-2xl border border-line bg-surface-2 p-4">
                       <FiGitBranch
                         size={21}
-                        className="shrink-0 text-[#EF8503]!"
+                        className="shrink-0 text-neon-orange!"
                       />
 
                       <p className="text-sm leading-6 text-ink-soft">
@@ -631,7 +631,7 @@ export default function About() {
                   <button
                     type="button"
                     onClick={() => setIsFlipped(false)}
-                    className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-semibold text-cream transition hover:border-[#EE9096] hover:text-[#EE9096] hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(238,144,150,0.2)]"
+                    className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-semibold text-cream transition hover:border-neon-pink hover:text-neon-pink hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(238,144,150,0.2)]"
                   >
                     <FiArrowLeft size={18} />
                     Back to Introduction
@@ -653,11 +653,11 @@ export default function About() {
           <div className="mx-auto max-w-3xl">
 
             <div className="mb-8 text-center">
-              <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-surface-2 text-[#EE9096] shadow-[0_0_20px_rgba(238,144,150,0.2)]">
+              <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-surface-2 text-neon-pink shadow-[0_0_20px_rgba(238,144,150,0.2)]">
                 <FiMessageSquare size={25} />
               </span>
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#147CBF]!">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-neon-blue!">
                 Let's Connect
               </p>
 
@@ -695,7 +695,7 @@ export default function About() {
                 rows={5}
                 maxLength={2000}
                 required
-                className="w-full resize-y rounded-2xl border border-line bg-bg px-4 py-4 text-sm leading-7 text-cream outline-none placeholder:text-muted focus:border-[#147CBF] focus:ring-1 focus:ring-[#147CBF] transition-colors"
+                className="w-full resize-y rounded-2xl border border-line bg-bg px-4 py-4 text-sm leading-7 text-cream outline-none placeholder:text-muted focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors"
               />
 
               <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
@@ -705,7 +705,7 @@ export default function About() {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#EE9096] to-[#147CBF] px-6 py-3 text-sm font-bold text-white! shadow-[0_0_15px_rgba(20,124,191,0.3)] transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_25px_rgba(238,144,150,0.5)]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-neon-pink to-neon-blue px-6 py-3 text-sm font-bold text-white! shadow-[0_0_15px_rgba(20,124,191,0.3)] transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_25px_rgba(238,144,150,0.5)]"
                 >
                   <FiSend size={16} />
                   Submit Feedback
@@ -717,7 +717,7 @@ export default function About() {
             {feedbackError && (
               <p
                 role="alert"
-                className="mt-4 rounded-xl border border-[#B60300] bg-[#B60300]/10 p-4 text-sm text-[#B60300]! shadow-[0_0_15px_rgba(182,3,0,0.1)]"
+                className="mt-4 rounded-xl border border-neon-red bg-neon-red/10 p-4 text-sm text-neon-red! shadow-[0_0_15px_rgba(182,3,0,0.1)]"
               >
                 {feedbackError}
               </p>
@@ -757,7 +757,7 @@ export default function About() {
               </div>
             ) : (
               /* 🚀 SCROLLABLE CONTAINER ADDED HERE */
-              <div className="max-h-[450px] space-y-4 overflow-y-auto pr-2 pb-4 scrollbar-thin scrollbar-thumb-[#EE9096]/50 scrollbar-track-transparent hover:scrollbar-thumb-[#EE9096]">
+              <div className="max-h-112.5 space-y-4 overflow-y-auto pr-2 pb-4 scrollbar-thin scrollbar-thumb-neon-pink/50 scrollbar-track-transparent hover:scrollbar-thumb-neon-pink">
                 {feedbacks.map((feedback) => (
                   <article
                     key={feedback.id}
@@ -783,13 +783,13 @@ export default function About() {
                           rows={4}
                           maxLength={2000}
                           required
-                          className="w-full resize-y rounded-2xl border border-line bg-bg px-4 py-3 text-sm leading-7 text-cream outline-none placeholder:text-muted focus:border-[#FDC700] transition-colors"
+                          className="w-full resize-y rounded-2xl border border-line bg-bg px-4 py-3 text-sm leading-7 text-cream outline-none placeholder:text-muted focus:border-neon-yellow transition-colors"
                         />
 
                         <div className="mt-4 flex flex-wrap gap-3">
                           <button
                             type="submit"
-                            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#77AB00] to-[#147CBF] px-5 py-2.5 text-sm font-bold text-white! shadow-[0_0_15px_rgba(119,171,0,0.3)] transition hover:opacity-90"
+                            className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-neon-green to-neon-blue px-5 py-2.5 text-sm font-bold text-white! shadow-[0_0_15px_rgba(119,171,0,0.3)] transition hover:opacity-90"
                           >
                             <FiCheckCircle size={16} />
                             Save Changes
@@ -798,7 +798,7 @@ export default function About() {
                           <button
                             type="button"
                             onClick={handleEditCancel}
-                            className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-cream transition hover:border-[#B60300] hover:text-[#B60300] hover:bg-surface-2"
+                            className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-cream transition hover:border-neon-red hover:text-neon-red hover:bg-surface-2"
                           >
                             <FiX size={16} />
                             Cancel
@@ -809,7 +809,7 @@ export default function About() {
                       /* Display feedback */
                       <>
                         <div className="flex items-start gap-3">
-                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-2 text-[#FDC700]">
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-2 text-neon-yellow">
                             <FiUser size={19} />
                           </span>
 
@@ -826,7 +826,7 @@ export default function About() {
                           </div>
                         </div>
 
-                        <p className="mt-5 whitespace-pre-wrap break-words text-sm leading-7 text-cream">
+                        <p className="mt-5 whitespace-pre-wrap wrap-break-word text-sm leading-7 text-cream">
                           {feedback.message}
                         </p>
 
@@ -843,7 +843,7 @@ export default function About() {
                           <button
                             type="button"
                             onClick={() => handleEditStart(feedback)}
-                            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-cream transition hover:border-[#147CBF] hover:text-[#147CBF] hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.2)]"
+                            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-cream transition hover:border-neon-blue hover:text-neon-blue hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(20,124,191,0.2)]"
                           >
                             <FiEdit2 size={15} />
                             Edit
@@ -852,7 +852,7 @@ export default function About() {
                           <button
                             type="button"
                             onClick={() => handleDelete(feedback.id)}
-                            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-cream transition hover:border-[#B60300] hover:text-[#B60300] hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(182,3,0,0.2)]"
+                            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-cream transition hover:border-neon-red hover:text-neon-red hover:bg-surface-2 hover:shadow-[0_0_15px_rgba(182,3,0,0.2)]"
                           >
                             <FiTrash2 size={15} />
                             Delete

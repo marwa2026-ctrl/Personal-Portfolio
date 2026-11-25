@@ -186,7 +186,7 @@ export default function Projects() {
           className="h-full w-full object-contain"
         />
         {isActive && isLink && (
-          <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-[#EE9096]/50 bg-surface-3/80 text-[#EE9096] opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+          <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-neon-pink/50 bg-surface-3/80 text-neon-pink opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
             <FiArrowUpRight size={20} />
           </span>
         )}
@@ -217,7 +217,7 @@ export default function Projects() {
 
         <div className="mx-auto mt-12 max-w-6xl">
           <div className="overflow-hidden rounded-3xl border border-line bg-surface px-4 pb-8 pt-10 sm:px-8 sm:pt-12 lg:px-12 shadow-lg">
-            <div className="relative z-30 mb-6 min-h-[76px] text-center">
+            <div className="relative z-30 mb-6 min-h-19 text-center">
               <motion.div
                 key={`${activeProject.number}-heading`}
                 initial={{ opacity: 0 }}
@@ -227,7 +227,7 @@ export default function Projects() {
                 <h2 className="font-display text-2xl font-medium text-cream sm:text-3xl">
                   {activeProject.title}
                 </h2>
-                <p className="mt-2 text-xs text-[#147CBF]! sm:text-sm font-semibold">
+                <p className="mt-2 text-xs text-neon-blue! sm:text-sm font-semibold">
                   {activeProject.tech}
                 </p>
               </motion.div>
@@ -236,9 +236,9 @@ export default function Projects() {
             <div
               onMouseMove={handlePointerMove}
               onMouseLeave={resetPointer}
-              className="relative mx-auto flex h-[360px] w-full max-w-4xl items-center justify-center overflow-hidden [perspective:1400px] sm:h-[460px] lg:h-[540px]"
+              className="relative mx-auto flex h-90 w-full max-w-4xl items-center justify-center overflow-hidden perspective-[1400px] sm:h-115 lg:h-135"
             >
-              <div className="pointer-events-none absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#EE9096]/20 to-[#147CBF]/20 blur-3xl sm:h-72 sm:w-72" />
+              <div className="pointer-events-none absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-linear-to-r from-neon-pink/20 to-neon-blue/20 blur-3xl sm:h-72 sm:w-72" />
 
               <motion.div
                 className="absolute inset-0 flex items-center justify-center"
@@ -265,7 +265,7 @@ export default function Projects() {
                         duration: animationDuration,
                         ease: [0.25, 0.8, 0.25, 1],
                       }}
-                      className="absolute flex h-[72%] w-[44%] max-w-[480px] items-center justify-center"
+                      className="absolute flex h-[72%] w-[44%] max-w-120 items-center justify-center"
                       style={{
                         transformStyle: "preserve-3d",
                         pointerEvents: t.hidden ? "none" : "auto",
@@ -285,7 +285,7 @@ export default function Projects() {
                 aria-label={liked ? "Unlike carousel" : "Like carousel"}
                 aria-pressed={liked}
                 className={`flex h-10 w-10 items-center justify-center transition-colors ${
-                  liked ? "text-[#EE9096]! drop-shadow-[0_0_10px_rgba(238,144,150,0.6)]" : "text-muted hover:text-[#EE9096]!"
+                  liked ? "text-neon-pink! drop-shadow-[0_0_10px_rgba(238,144,150,0.6)]" : "text-muted hover:text-neon-pink!"
                 }`}
               >
                 <FiHeart size={23} fill={liked ? "currentColor" : "none"} />
@@ -302,7 +302,7 @@ export default function Projects() {
           <div className="mt-7 border-b border-line pb-7">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
               <div className="max-w-2xl">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#EE9096]!">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-pink!">
                   {activeProject.number} — {activeProject.tech}
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-semibold text-cream sm:text-3xl">
@@ -319,7 +319,7 @@ export default function Projects() {
                     .map((t) => (
                       <span
                         key={t}
-                        className="border border-line bg-surface-2 px-3 py-1.5 text-xs text-cream transition-colors hover:border-[#147CBF]"
+                        className="border border-line bg-surface-2 px-3 py-1.5 text-xs text-cream transition-colors hover:border-neon-blue"
                       >
                         {t}
                       </span>
@@ -334,7 +334,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   whileHover={shouldReduceMotion ? {} : { scale: 1.04, x: 3 }}
                   whileTap={shouldReduceMotion ? {} : { scale: 0.97 }}
-                  className="mt-1 inline-flex shrink-0 items-center gap-3 self-start rounded-full bg-gradient-to-r from-[#EE9096] to-[#147CBF] px-6 py-3.5 text-sm font-bold text-white! shadow-[0_0_20px_rgba(238,144,150,0.3)] transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_30px_rgba(20,124,191,0.5)]"
+                  className="mt-1 inline-flex shrink-0 items-center gap-3 self-start rounded-full bg-linear-to-r from-neon-pink to-neon-blue px-6 py-3.5 text-sm font-bold text-white! shadow-[0_0_20px_rgba(238,144,150,0.3)] transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_30px_rgba(20,124,191,0.5)]"
                 >
                   View Live Website
                   <FiExternalLink size={16} />
@@ -349,7 +349,7 @@ export default function Projects() {
 
           <div
             ref={thumbnailsRef}
-            className="mt-7 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4 pt-2 [scrollbar-width:thin] [scrollbar-color:#EE9096_transparent]"
+            className="mt-7 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4 pt-2 scrollbar-thin [scrollbar-color:#EE9096_transparent]"
           >
             {projectItems.map((project, i) => (
               <button
@@ -360,7 +360,7 @@ export default function Projects() {
                 aria-current={i === activeIndex}
                 className={`relative shrink-0 snap-center overflow-hidden rounded-md border-2 transition-all duration-300 ${
                   i === activeIndex
-                    ? "border-[#EE9096]! opacity-100 shadow-[0_0_15px_rgba(238,144,150,0.5)]"
+                    ? "border-neon-pink! opacity-100 shadow-[0_0_15px_rgba(238,144,150,0.5)]"
                     : "border-transparent opacity-50 hover:opacity-80"
                 }`}
                 style={{ width: 120, height: 72 }}
