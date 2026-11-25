@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-bg: #000000;
+  --color-surface: #09090b;
+  --color-surface-2: #121215;
+  --color-surface-3: #1c1c21;
+
+  /* Text */
+  --color-ink: #ffffff;
+  --color-cream: #f4f4f5;
+  --color-ink-soft: #a1a1aa;
+  --color-muted: #71717a;
+  --color-line: #27272a;
+
+  /* Your Custom Palette */
+  --color-neon-pink: #EE9096;
+  --color-neon-red: #B60300;
+  --color-neon-orange: #EF8503;
+  --color-neon-yellow: #FDC700;
+  --color-neon-green: #77AB00;
+  --color-neon-blue: #147CBF;
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+/* Default: Dark mode */
+:root {
+  color-scheme: dark;
+  
+  --color-bg: #000000;
+  --color-surface: #09090b;
+  --color-surface-2: #121215;
+  --color-surface-3: #1c1c21;
+
+  --color-ink: #ffffff;
+  --color-cream: #f4f4f5;
+  --color-ink-soft: #a1a1aa;
+  --color-muted: #71717a;
+  --color-line: #27272a;
+
+  /* Dark mode: Slightly brighter versions of your colors */
+  --color-neon-pink: #EE9096;
+  --color-neon-red: #ff2a24; 
+  --color-neon-orange: #EF8503;
+  --color-neon-yellow: #FDC700;
+  --color-neon-green: #99d800;
+  --color-neon-blue: #4fb3ff;
+}
+
+/* Light mode */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f4f5;
+  --color-surface-3: #e4e4e7;
+
+  --color-ink: #18181b;
+  --color-cream: #09090b;
+  --color-ink-soft: #3f3f46;
+  --color-muted: #71717a;
+  --color-line: #e4e4e7;
+
+  /* Light mode: Using your exact hex codes for readability */
+  --color-neon-pink: #EE9096;
+  --color-neon-red: #B60300;
+  --color-neon-orange: #EF8503;
+  --color-neon-yellow: #FDC700;
+  --color-neon-green: #77AB00;
+  --color-neon-blue: #147CBF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+::selection {
+  background-color: var(--color-neon-blue);
+  color: #ffffff;
+}
+/* 🖨️ PRINT STYLES */
+@media print {
+  /* Hide the navbar, footer, and any buttons */
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+
+  /* Force the background to be white and text to be black for the printer */
+  body, main, div {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove extra margins so it fits perfectly on A4 paper */
+  @page {
+    margin: 1.5cm;
+  }
+  
+  /* Hide scrollbars */
+  html, body {
+    overflow: visible !important;
+  }
+}
